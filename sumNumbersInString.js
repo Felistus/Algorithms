@@ -8,3 +8,4 @@ function sumNumbersInString(string) {
   return newString.map((element) => Number(element)).reduce((a, b) => a + b, 0);
 }
 console.log(sumNumbersInString("1weudh56jdnbfskjn788sdhkfbs90"));
+console.log(sumNumbersInString("2,g,65,e,3,7,5,g,3"));
