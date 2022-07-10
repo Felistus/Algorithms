@@ -4,7 +4,7 @@
 // to return 54.
 
 function sumOfAges(array) {
-  return array.map((value) => value.age).reduce((a, b) => a + b);
+  return array.map((value) => value.age).reduce((a, b) => a + b, 0);
 }
 console.log(
   sumOfAges([
