@@ -8,7 +8,7 @@ function sumOfAges(array) {
 }
 console.log(
   sumOfAges([
-    { name: "Uche Egbo", age: 54, occupation: "Trader" },
+    { name: "Uche Egbo", age: 24, occupation: "Trader" },
     { name: "Solomon Ogbodo", age: 30, occupation: "Accountant" },
   ])
 );
