@@ -18,6 +18,4 @@ function selectionSort(arrayToBeSorted) {
   }
   return arrayToBeSorted;
 }
-console.log(
-  selectionSort([0, 100, 1, 3, 8, 1, 2, 90, 4, 10, 6, 30, 5, 0, 7, 0])
-);
+console.log(selectionSort([100, 1, 3, 8, 1, 2, 90, 4, 10, 6, 30, 5, 0, 7, 0]));
