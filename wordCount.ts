@@ -1,6 +1,5 @@
 function wordCount(arrayOfStrings: string[]) {
   const wordMap: Map<string, number> = new Map();
-  let count: number = 0;
   let index: number = 0;
 
   for (index; index < arrayOfStrings.length; index++) {
@@ -10,10 +9,8 @@ function wordCount(arrayOfStrings: string[]) {
         Number(wordMap.get(arrayOfStrings[index])) + 1
       );
     } else {
-      count++;
-      wordMap.set(arrayOfStrings[index], count);
+      wordMap.set(arrayOfStrings[index], 1);
     }
-    count = 0;
   }
   return wordMap;
 }

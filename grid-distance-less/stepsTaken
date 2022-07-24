@@ -1,0 +1,9 @@
+Instantiated a new Map().
+Declared an empty distance array.
+Created a new array from the old array using map() and rearranged the values position in the new array using the 
+map([key, value]) technique Eg: ["300km", "south"] => ["south", "300km"].
+Iterate through the newArrayOfDirections and check if the Map() object contains the  key: adds the key or updates the key's value and remove the "km" from the value using split("km") and convert it to number using Number() 
+Eg: {"south" => 300}.
+Convert the Map() to an actual object Eg: {"south" => 300} ==> {"south": 300}
+Iterate through it and add a negative (-) operator to the numbers that match *north and west*, push into the distance array.
+Lastly, perform a reduce() on the distance array and return the shortest distancecalculated.
