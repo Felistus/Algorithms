@@ -28,5 +28,5 @@ function subStringPalindromeTwo(str) {
   }
   return Math.max(...arr);
 }
-
+console.log(subStringPalindromeTwo("madam"));
 console.log(subStringPalindromeTwo("madam is going to kayak to repaper."));
