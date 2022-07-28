@@ -6,8 +6,8 @@ Data Structures challenges touched are:
 - Queue, 
 - Stack, 
 - Linked-List 
-  - - Singly and 
-  - - Doubly Linked Lists)
+  - Singly and 
+  - Doubly Linked Lists)
 
 ### Testing
 You can install Quokka to test your algorithm as you code and see outputs as you proceed or simply write and test in your chrome browser using the Chrome Snippet under Sources in the dev section.
