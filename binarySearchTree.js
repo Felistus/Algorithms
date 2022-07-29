@@ -50,11 +50,50 @@ class BinarySearchTree {
     }
     return `false: ${value} not in tree`;
   }
+  // Breath-First Search : horizontal search
+  BFS() {
+    let node = this.root;
+    let queue = [];
+    let treeData = [];
+    queue.push(node);
+    while (queue.length) {
+      node = queue.shift();
+      treeData.push(node.value);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return treeData;
+  }
+  DFS_PreOrder() {
+    let preOrderData = [];
+    function traverse(node) {
+      preOrderData.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return preOrderData;
+  }
+  DFS_PostOrder() {
+    let postOrderData = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      postOrderData.push(node.value);
+    }
+    traverse(this.root);
+    return postOrderData;
+  }
 }
 const tree = new BinarySearchTree();
 tree.insert(10);
-tree.insert(5);
-tree.insert(11);
 tree.insert(6);
-console.log(tree.search(6));
-console.log(tree);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+// console.log(tree.search(6));
+// console.log(tree);
+console.log(tree.BFS());
+console.log(tree.DFS_PreOrder());
+console.log(tree.DFS_PostOrder());
