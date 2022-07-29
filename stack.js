@@ -12,6 +12,9 @@ class Stack {
     this.size = 0;
   }
   // unshift (adds new items to the front of the stack)
+  size() {
+    return this.size;
+  }
   push(element) {
     let newNode = new Node(element);
     if (!this.size) this.first = this.last = newNode;
@@ -34,7 +37,6 @@ class Stack {
     return removedHead;
   }
 }
-
 const stack = new Stack();
 stack.push(100);
 stack.push(200);

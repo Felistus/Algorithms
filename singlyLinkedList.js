@@ -97,12 +97,12 @@ class SinglyLinkedList {
   }
   // get all list items(node elements)
   getAllNodeElements() {
-    let stack = [];
+    let newArray = [];
     while (this.head) {
-      stack.push(this.head.value);
+      newArray.push(this.head.value);
       this.head = this.head.next;
     }
-    return stack;
+    return newArray;
   }
   // get a particular node element from the list
   getNode(index) {
