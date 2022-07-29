@@ -15,27 +15,40 @@ class BinarySearchTree {
     if (!this.root) {
       this.root = newNode;
       return this;
-    } else {
-      let currentRoot = this.root;
-      while (true) {
-        if (value === currentRoot.value) return undefined;
-        if (value > currentRoot.value) {
-          if (currentRoot.right) {
-            currentRoot = currentRoot.right;
-          } else {
-            currentRoot.right = newNode;
-            return this;
-          }
-        } else if (value < currentRoot.value) {
-          if (currentRoot.left) {
-            currentRoot = currentRoot.left;
-          } else {
-            currentRoot.left = newNode;
-            return this;
-          }
+    }
+    let currentRoot = this.root;
+    while (true) {
+      if (value === currentRoot.value) return undefined;
+      if (value > currentRoot.value) {
+        if (currentRoot.right) {
+          currentRoot = currentRoot.right;
+        } else {
+          currentRoot.right = newNode;
+          return this;
+        }
+      } else if (value < currentRoot.value) {
+        if (currentRoot.left) {
+          currentRoot = currentRoot.left;
+        } else {
+          currentRoot.left = newNode;
+          return this;
         }
       }
     }
+  }
+  search(value) {
+    if (!this.root) return "Empty Tree";
+    let currentRoot = this.root;
+    while (currentRoot) {
+      if (value > currentRoot.value) {
+        currentRoot = currentRoot.right;
+      } else if (value < currentRoot.value) {
+        currentRoot = currentRoot.left;
+      } else {
+        return `true: ${currentRoot.value} found in tree`;
+      }
+    }
+    return `false: ${value} not in tree`;
   }
 }
 const tree = new BinarySearchTree();
@@ -43,4 +56,5 @@ tree.insert(10);
 tree.insert(5);
 tree.insert(11);
 tree.insert(6);
+console.log(tree.search(6));
 console.log(tree);
