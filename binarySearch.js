@@ -4,7 +4,6 @@ function binarySearch(arr, value) {
   let end = arr.length - 1;
   let middle = Math.floor((start + end) / 2);
   while (arr[middle] !== value && start <= end) {
-    console.log(start, end, middle, value);
     arr[middle] > value ? (end = middle - 1) : (start = middle + 1);
     middle = Math.floor((end + start) / 2);
   }
