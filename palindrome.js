@@ -18,15 +18,12 @@ console.log(isPalindromeOne("A man, a plan, a canal. Panama"));
 // OR
 
 function isPalindromeTwo(string) {
-  const regExp = /[\W_]/g;
   const newArr = [];
   let testWord = "";
-  const formattedString = string.toLowerCase().replace(regExp, "");
+  const formattedString = string.toLowerCase();
   for (let i = 0; i < formattedString.length; i++)
     newArr.unshift(formattedString[i]); //adds string to the front of the array
-
-  for (let j = 0; j < newArr.length; j++) testWord += newArr[j]; //joins the array element (join(""))
-
+  testWord = newArr.join("");
   if (formattedString === testWord) return true;
   else return false;
 }
