@@ -22,7 +22,7 @@ class Queue {
     return this;
   }
   // shift (deletes item from the front of the stack)
-  pop() {
+  shift() {
     let oldNode = this.first;
     if (!this.size) return undefined;
     if (this.size === 1) this.first = this.last = null;
@@ -37,3 +37,5 @@ class Queue {
 const queue = new Queue();
 queue.push(100);
 queue.push(200);
+queue.shift();
+console.log(queue);
