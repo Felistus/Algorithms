@@ -6,7 +6,9 @@ function operations(ops) {
   const finalArray = [];
   const lenOfOps = ops.length;
 
+  if (typeof ops[0] === "string") return "initial value must be a number";
   for (let i = 0; i < lenOfOps; i++) {
+    const lenOfFinal = finalArray.length;
     const element = ops[i];
     if (element !== "C") {
       if (element !== "D") {
@@ -14,12 +16,11 @@ function operations(ops) {
           finalArray.push(element);
         } else {
           finalArray.push(
-            finalArray[finalArray.length - 1] +
-              finalArray[finalArray.length - 2]
+            finalArray[lenOfFinal - 1] + finalArray[lenOfFinal - 2]
           );
         }
       } else {
-        finalArray.push(finalArray[finalArray.length - 1] * 2);
+        finalArray.push(finalArray[lenOfFinal - 1] * 2);
       }
     } else {
       finalArray.pop();
@@ -27,6 +28,6 @@ function operations(ops) {
   }
   return finalArray.reduce((a, b) => a + b);
 }
-
-console.log(operations([5, 2, "C", "D", "+"]));
+console.log(operations([5, 5, 2, "C", "D", "+"]));
+console.log(operations(["+", 5, 2, "C", "D", "+"]));
 console.log(operations([5, -2, 4, "C", "D", 9, "+", "+"]));
