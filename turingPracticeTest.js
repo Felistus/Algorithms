@@ -21,9 +21,8 @@ function operations(ops) {
       } else finalArray.push(finalArray[lenOfFinal - 1] * 2);
     } else finalArray.pop();
   }
-  console.log(finalArray);
   return finalArray.reduce((a, b) => a + b);
 }
 console.log(operations([5, 5, 2, "C", "D", "+"]));
-// console.log(operations(["+", 5, 2, "C", "D", "+"]));
-// console.log(operations([5, -2, 4, "C", "D", 9, "+", "+"]));
+console.log(operations(["+", 5, 2, "C", "D", "+"]));
+console.log(operations([5, -2, 4, "C", "D", 9, "+", "+"]));
