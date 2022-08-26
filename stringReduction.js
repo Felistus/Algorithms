@@ -15,4 +15,4 @@ function stringReduction(str) {
   }
   return str.length;
 }
-console.log(stringReduction("abc"));
+console.log(stringReduction("abbc"));
